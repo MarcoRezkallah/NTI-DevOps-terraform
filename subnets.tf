@@ -14,6 +14,6 @@ resource "aws_subnet" "public-b" {
   availability_zone = "${var.region}-${var.az2}"
 
   tags = {
-    Name = "${var.project}-${var.environment}-Public-${var.az1}-Subnet"
+    Name = "${var.project}-${var.environment}-Public-${var.az2}-Subnet"
   }
 }
