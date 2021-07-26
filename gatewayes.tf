@@ -13,7 +13,7 @@ resource "aws_internet_gateway" "main-igw" {
 }
 
 resource "aws_nat_gateway" "main-ngw" {
-  subnet_id     = aws_subnet.main.id
+  subnet_id     = aws_subnet.network.id
   allocation_id = aws_eip.nat-gw-ip.id
 
   tags = {
