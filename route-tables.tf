@@ -25,7 +25,7 @@ resource "aws_route_table" "private" {
 }
 
 resource "aws_route_table_association" "newtwork" {
-  subnet_id      = aws_subnet.newtwork.id
+  subnet_id      = aws_subnet.network.id
   route_table_id = aws_route_table.public.id
 }
 
