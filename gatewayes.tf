@@ -1,4 +1,6 @@
 resource "aws_eip" "nat-gw-ip" {
+  vpc = true
+
   tags = {
     "Name" = "${var.project}-${var.environment}-NAT-GW-IP"
   }
