@@ -5,3 +5,5 @@ variable "az1" {}
 variable "az2" {}
 variable "project" {}
 variable "cidr-prefix" {}
+variable "bucket" {}
+variable "bucket-path" {}
