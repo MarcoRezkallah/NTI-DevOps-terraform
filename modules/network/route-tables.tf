@@ -7,7 +7,7 @@ resource "aws_route_table" "public" {
   }
 
   tags = {
-    Name = "${var.project}-${var.env}-Public-RT"
+    Name = "${var.name-tag}-${var.env}-Public-RT"
   }
 }
 
@@ -20,7 +20,7 @@ resource "aws_route_table" "private" {
   }
 
   tags = {
-    Name = "${var.project}-${var.env}-Private-RT"
+    Name = "${var.name-tag}-${var.env}-Private-RT"
   }
 }
 
@@ -58,6 +58,6 @@ resource "aws_route_table_association" "online-private-b" {
 #   }
 
 #   tags = {
-#     Name = "${var.project}-${var.env}-Manual-RT"
+#     Name = "${var.name-tag}-${var.env}-Manual-RT"
 #   }
 # }

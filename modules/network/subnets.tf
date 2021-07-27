@@ -4,7 +4,7 @@ resource "aws_subnet" "public-a" {
   availability_zone = var.az1
 
   tags = {
-    Name = "${var.project}-${var.env}-Public-${var.az1}-Subnet"
+    Name = "${var.name-tag}-${var.env}-Public-${var.az1}-Subnet"
   }
 }
 
@@ -14,7 +14,7 @@ resource "aws_subnet" "public-b" {
   availability_zone = var.az2
 
   tags = {
-    Name = "${var.project}-${var.env}-Public-${var.az2}-Subnet"
+    Name = "${var.name-tag}-${var.env}-Public-${var.az2}-Subnet"
   }
 }
 
@@ -23,7 +23,7 @@ resource "aws_subnet" "network" {
   cidr_block = "${var.cidr-prefix}.200.0/24"
 
   tags = {
-    Name = "${var.project}-${var.env}-Network-Subnet"
+    Name = "${var.name-tag}-${var.env}-Network-Subnet"
   }
 }
 
@@ -33,7 +33,7 @@ resource "aws_subnet" "online-private-a" {
   availability_zone = var.az1
 
   tags = {
-    Name = "${var.project}-${var.env}-Online-Private-${var.az1}-Subnet"
+    Name = "${var.name-tag}-${var.env}-Online-Private-${var.az1}-Subnet"
   }
 }
 
@@ -43,7 +43,7 @@ resource "aws_subnet" "online-private-b" {
   availability_zone = var.az2
 
   tags = {
-    Name = "${var.project}-${var.env}-Online-Private-${var.az2}-Subnet"
+    Name = "${var.name-tag}-${var.env}-Online-Private-${var.az2}-Subnet"
   }
 }
 
@@ -54,7 +54,7 @@ resource "aws_subnet" "offline-private-a" {
   availability_zone = var.az1
 
   tags = {
-    Name = "${var.project}-${var.env}-Offline-Private-${var.az1}-Subnet"
+    Name = "${var.name-tag}-${var.env}-Offline-Private-${var.az1}-Subnet"
   }
 }
 
@@ -64,6 +64,6 @@ resource "aws_subnet" "offline-private-b" {
   availability_zone = var.az2
 
   tags = {
-    Name = "${var.project}-${var.env}-Offline-Private-${var.az2}-Subnet"
+    Name = "${var.name-tag}-${var.env}-Offline-Private-${var.az2}-Subnet"
   }
 }
